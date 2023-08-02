@@ -17,7 +17,10 @@ composer require fredbradley/cranleigh-backup
 ## Usage
 
 ```php
-// Usage description here
+/**
+ * Nothing for you to do. Just ensure that you have spatie/laravel-backup
+ * package using the `cranleigh-backup` disk.
+ */
 ```
 
 ### Testing
