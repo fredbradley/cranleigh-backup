@@ -8,4 +8,7 @@ class CranleighBackup
     {
         return true;
     }
+    public function testChange(): bool {
+        return false;
+    }
 }
