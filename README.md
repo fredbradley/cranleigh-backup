@@ -4,7 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/fredbradley/cranleigh-backup.svg?style=flat-square)](https://packagist.org/packages/fredbradley/cranleigh-backup)
 ![GitHub Actions](https://github.com/fredbradley/cranleigh-backup/actions/workflows/main.yml/badge.svg)
 
-Rather than faff with config files, just inlucde this package and it will do half the work for you.
+Rather than faff with config files, just include this package, and it will do half the work for you.
 
 ## Installation
 
@@ -16,24 +16,19 @@ composer require fredbradley/cranleigh-backup
 
 ## Usage
 
-```php
-/**
- * Nothing for you to do. Just ensure that you have spatie/laravel-backup
- * package using the `cranleigh-backup` disk.
- *
- * Additionally confirm that the 'CRANLEIGH_BACKUP_PASSWORD' `env()` variable is set in your `.env` file. 
- */
-```
+1. Confirm that you have an `env()` variable called `CRANLEIGH_BACKUP_PASSWORD` set in your `.env` file.
+2. Ensure that you have the `spatie/laravel-backup` package installed and configured to use the `cranleigh-backup` disk. (Find any references to `sftp` and change to `cranleigh-backup`)
+3. That's it. You're done.
 
 ### Testing
 
 ```bash
 composer test
 ```
-
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+_Always aiming for 100% code coverage!_
+```bash
+composer test-coverage
+```
 
 ## Contributing
 

@@ -5,7 +5,7 @@ namespace FredBradley\CranleighBackup;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \FredBradley\CranleighBackup\Skeleton\SkeletonClass
+ * @see \FredBradley\CranleighBackup\CranleighBackup
  */
 class CranleighBackupFacade extends Facade
 {

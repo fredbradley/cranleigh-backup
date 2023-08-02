@@ -8,5 +8,4 @@ class CranleighBackup
     {
         return true;
     }
-    // Build your next great package.
 }
