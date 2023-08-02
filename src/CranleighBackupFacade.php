@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \FredBradley\CranleighBackup\CranleighBackup
+ *
+ * @method static string getDiskName(): string
+ * @method static string getHostname(): string
  */
 class CranleighBackupFacade extends Facade
 {

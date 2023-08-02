@@ -66,28 +66,14 @@ class CranleighBackupServiceProvider extends ServiceProvider
      */
     private function addStorageDisk(): void
     {
-        Config::set('filesystems.disks.cranleigh-backup', [
+        $diskName = CranleighBackupFacade::getDiskName();
+        Config::set('filesystems.disks.'.$diskName, [
             'driver' => 'sftp',
             'host' => 'cswebbackup01.cranleigh.org',
             'username' => 'backups',
             'password' => config('cranleigh-backup.password', env('CRANLEIGH_BACKUP_PASSWORD')),
             'port' => 22,
-            'root' => self::getHostname(),
+            'root' => CranleighBackupFacade::getHostname(),
         ]);
-    }
-
-    /**
-     * @throws Exception
-     */
-    public static function getHostname(): string
-    {
-        if (! is_string(config('app.url'))) {
-            throw new Exception('No Hostname set in config/app.php');
-        }
-        $url = parse_url(config('app.url'));
-        if (isset($url['host'])) {
-            return $url['host'];
-        }
-        throw new Exception('No Hostname set in config/app.php');
     }
 }
