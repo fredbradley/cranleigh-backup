@@ -1,0 +1,62 @@
+{
+    "name": "fredbradley/cranleigh-backup",
+    "description": "",
+    "keywords": [
+        "FredBradley",
+        "cranleigh-backup"
+    ],
+    "homepage": "https://github.com/fredbradley/cranleigh-backup",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Fred Bradley",
+            "email": "code@fredbradley.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0||^10.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10",
+        "nunomaduro/larastan": "^2.0",
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "^1.23",
+        "pestphp/pest-plugin-laravel": "^1.4",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FredBradley\\CranleighBackup\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FredBradley\\CranleighBackup\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "pint": "vendor/bin/pint",
+        "phpstan": "vendor/bin/phpstan analyse",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FredBradley\\CranleighBackup\\CranleighBackupServiceProvider"
+            ],
+            "aliases": {
+                "CranleighBackup": "FredBradley\\CranleighBackup\\CranleighBackupFacade"
+            }
+        }
+    }
+}
