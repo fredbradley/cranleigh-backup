@@ -20,6 +20,8 @@ composer require fredbradley/cranleigh-backup
 /**
  * Nothing for you to do. Just ensure that you have spatie/laravel-backup
  * package using the `cranleigh-backup` disk.
+ *
+ * Additionally confirm that the 'CRANLEIGH_BACKUP_PASSWORD' `env()` variable is set in your `.env` file. 
  */
 ```
 
