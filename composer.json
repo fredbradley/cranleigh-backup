@@ -49,6 +49,9 @@
             "pestphp/pest-plugin": true
         }
     },
+    "suggest": {
+        "spatie/laravel-backup": "You need the Spatie package, but we want you to install it yourself."
+    },
     "extra": {
         "laravel": {
             "providers": [
