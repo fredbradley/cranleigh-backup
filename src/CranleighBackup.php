@@ -8,10 +8,4 @@ class CranleighBackup
     {
         return true;
     }
-
-    public function testagain()
-    {
-
-        return true;
-    }
 }

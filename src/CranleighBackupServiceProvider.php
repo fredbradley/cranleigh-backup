@@ -4,7 +4,6 @@ namespace FredBradley\CranleighBackup;
 
 use Exception;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 
 class CranleighBackupServiceProvider extends ServiceProvider
