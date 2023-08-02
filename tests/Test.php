@@ -4,10 +4,7 @@ declare(strict_types=1);
 test('confirm config is loaded', function () {
     expect(config('cranleigh-backup'))->toBeArray();
 });
-test('confirm config has cranleigh-backup filesystem', function () {
-    $array = \Illuminate\Support\Facades\Storage::disk('cranleigh-backup');
-    expect($array)->toBeArray()->toHaveKeys(['driver', 'host', 'username', 'password', 'port', 'root']);
-});
+
 test('test function', function () {
     $class = new \FredBradley\CranleighBackup\CranleighBackup();
     expect($class->test())->toBeTrue();

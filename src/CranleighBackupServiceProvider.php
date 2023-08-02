@@ -3,6 +3,7 @@
 namespace FredBradley\CranleighBackup;
 
 use Exception;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 
@@ -66,7 +67,7 @@ class CranleighBackupServiceProvider extends ServiceProvider
      */
     private function addStorageDisk(): void
     {
-        Storage::set('cranleigh-backup', [
+        Config::set('filesystems.disks.cranleigh-backup', [
             'driver' => 'sftp',
             'host' => 'cswebbackup01.cranleigh.org',
             'username' => 'backups',
