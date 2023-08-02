@@ -6,7 +6,7 @@ use Exception;
 
 class CranleighBackup
 {
-    public function getDiskName(): bool
+    public function getDiskName(): string
     {
         return 'cranleigh-backup';
     }
